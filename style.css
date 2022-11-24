@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Almarai-B;
+  src: url(./font/Almarai-Bold.ttf);
+}
+
+@font-face {
+  font-family: PressStart2P;
+  src: url(./font/PressStart2P-Regular.ttf);
+}
+
+#result {
+  font-family: PressStart2P, cursive;
+}
+
+nav {
+  font-family: PressStart2P, cursive;
+}
+
+.player,
+.computer {
+  font-family: PressStart2P, cursive;
+}
+
+#player {
+  animation-name: in_and_out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#computer {
+  animation-name: in_and_out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes in_and_out {
+  0% {
+    transform: translateY(10px);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
