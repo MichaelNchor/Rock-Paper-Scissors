@@ -1,3 +1,5 @@
+let playerscore = 0;
+let computerscore = 0;
 function rockPaperScissors() {
   let resultdiv = document.querySelector("#result");
   const mychoice = prompt("ROCK,PAPER or SCISSORS").toLowerCase();
@@ -42,6 +44,8 @@ function rockPaperScissors() {
       if (options[i].computer == computerChoice) {
         let playericon = document.getElementById("player");
         let computericon = document.getElementById("computer");
+        let playerscoreshow = document.querySelector("#playerscore");
+        let computerscoreshow = document.querySelector("#computerscore");
         playericon.setAttribute("src", `./img/${options[i].player}-left.png`);
         computericon.setAttribute(
           "src",
@@ -49,9 +53,13 @@ function rockPaperScissors() {
         );
         if (options[i].result == "win") {
           resultdiv.setAttribute("style", "color: blue");
+          playerscore++;
+          playerscoreshow.innerHTML = playerscore;
           return `${options[i].player} ${options[i].action} ${options[i].computer}!  You ${options[i].result}`.toUpperCase();
         } else if (options[i].result == "lose") {
           resultdiv.setAttribute("style", "color: red");
+          computerscore++;
+          computerscoreshow.innerHTML = computerscore;
           return `${options[i].computer} ${options[i].action} ${options[i].player}!  You ${options[i].result}`.toUpperCase();
         } else {
           resultdiv.setAttribute("style", "color: black");

@@ -8,6 +8,11 @@
   src: url(./font/PressStart2P-Regular.ttf);
 }
 
+#playerscore,
+#computerscore {
+  font-family: PressStart2P, cursive;
+}
+
 #result {
   font-family: PressStart2P, cursive;
 }
@@ -21,16 +26,13 @@ nav {
   font-family: PressStart2P, cursive;
 }
 
+#computer,
 #player {
   animation-name: in_and_out;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-}
-
-#computer {
-  animation-name: in_and_out;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  height: 120px;
+  width: 120px;
 }
 
 @keyframes in_and_out {
